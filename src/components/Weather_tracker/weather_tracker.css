@@ -1,0 +1,33 @@
+.city {
+    color: darkorchid;
+    margin-left: 10px;
+    font-size:15px;
+
+}
+
+.title {
+    color: blueviolet;
+    margin-left: 10px
+}
+
+.instructions {
+    margin-left:10px;
+    font-weight: 500;
+    color:#581a92;
+}
+
+.weather-info {
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.city-name {
+    font-weight: 600;
+    margin-left: 10px;
+    color: darkorchid;
+}
+
+.city-form-container {
+    margin-left: 10px
+}

@@ -1,0 +1,53 @@
+.element {
+    font-weight: 300;
+    padding: 5px
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid pink;
+    height: 45px;
+    margin-left: 10px;
+    margin-top: 19px;
+    width: 500px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tags-container {
+    display: flex;
+    flex-direction: row
+}
+
+.input {
+    border: none;
+    margin: 20px;
+    height: 40px;
+    font-size: 20px
+}
+
+.input:focus {
+    outline: none
+}
+
+.element-container {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    background-color: pink;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 19%;
+}
+
+.x-sign {
+    cursor: pointer;
+    font-size: 12px;
+    padding: 5px;
+    font-weight: 900;
+}

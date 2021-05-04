@@ -1,0 +1,41 @@
+.celeb-img {
+    cursor: pointer;
+}
+
+.score {
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.game-container-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.celeb-img {
+    margin-left: 10px
+}
+
+.game-title {
+    font-size: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.btn {
+    width: 89px;
+    height: 30px;
+    background-color: #00edff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    margin-left:10px
+}
+
+.win-message {
+    margin-right: 20px;
+    margin-left: 10px;
+}
