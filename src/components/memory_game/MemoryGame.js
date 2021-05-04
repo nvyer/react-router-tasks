@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useReducer, useState } from 'react';
 import { data } from '../../service/data';
 import './MemoryGame.css';
 
@@ -9,6 +9,7 @@ export default function MemoryGame() {
     const [imageData, setImageData] = useState(data);
     const [start, setStart] = useState(false);
     let [score, setScore] = useState(0);
+
 
     const startTheGame = () => {
         setStart(!start);

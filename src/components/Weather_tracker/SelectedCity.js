@@ -10,7 +10,6 @@ export default function SelectedCity() {
         fetch(baseURL)
             .then(res => res.json())
             .then(res => {
-                console.log(res)
                 setWeather({
                     temp: res.main.temp,
                     humidity: res.main.humidity,
