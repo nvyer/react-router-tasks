@@ -1,9 +1,7 @@
-import React, { useReducer, useState } from 'react';
+import React, { useState } from 'react';
 import { data } from '../../service/data';
 import './MemoryGame.css';
 
-// fix the setImageData shit
-// try using useReducer
 
 export default function MemoryGame() {
     const [imageData, setImageData] = useState(data);
@@ -16,18 +14,24 @@ export default function MemoryGame() {
     };
 
     const handleClick = (id) => {
-        imageData.forEach((el) => {
-            if (el.id === id) {
-                if (el.clicked === true) {
+        setImageData(prevState => {
+            return prevState.map((el) => {
+                if (el.id === id && el.clicked === true) {
                     setScore(0);
+                    return el;
+                } else if (el.id === id && el.clicked !== true) {
+                    console.log('mtav if else')
+                    return {
+                        ...el,
+                        clicked: true
+                    }
                 } else {
-                    setScore(prevState => prevState + 1);
-                    el.clicked = true
+                    return el
                 }
-            }
+            })
         })
-        shuffle();
 
+        shuffle();
     }
 
     const shuffle = () => {
