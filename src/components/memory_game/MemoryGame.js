@@ -8,7 +8,6 @@ export default function MemoryGame() {
     const [start, setStart] = useState(false);
     let [score, setScore] = useState(0);
 
-
     const startTheGame = () => {
         setStart(!start);
     };
@@ -18,9 +17,10 @@ export default function MemoryGame() {
             return prevState.map((el) => {
                 if (el.id === id && el.clicked === true) {
                     setScore(0);
+                    setImageData(data);
                     return el;
                 } else if (el.id === id && el.clicked !== true) {
-                    console.log('mtav if else')
+                    setScore(prevState => prevState + 0.5)
                     return {
                         ...el,
                         clicked: true
@@ -33,7 +33,7 @@ export default function MemoryGame() {
 
         shuffle();
     }
-
+    
     const shuffle = () => {
         setImageData(prevState => prevState.sort((a, b) => 0.5 - Math.random()))
     }
@@ -49,7 +49,6 @@ export default function MemoryGame() {
             <p className='game-title'>Memory Game</p>
             <p>* Try to click on same picture once to win the game</p>
             <p className='score'>{score === imageData.length ? (<span className='win-messege-container'> <span className='win-message'>YOU WON !</span> <button onClick={reset} className='btn'>Reset</button></span>) : `Your score : ${score} `}</p>
-            {start && <button onClick={reset} className='btn'>Reset</button>}
             <div className='game-container-wrapper'>
                 {!start && <button className='btn' onClick={startTheGame} >Start</button>}
                 <div className='image-container'>
