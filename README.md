@@ -1,6 +1,4 @@
-# Homework #17
-
-## Tasks
+### Tasks
 
  1. Memory Game
  
